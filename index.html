@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>pingpad splash</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/foundation.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <section id="home" class="fullscreen signup">
+        <a href="#about"><i class="fa fa-arrow-circle-down"></i></a>
+        <!-- <div id="layer"></div> -->
+        <div id="form-block">
+          <img id="logo" src="images/logo.png">
+          <p id="tag-line"> We are making collaboration as instant, simple and viral as messaging.</p>
+          <div>
+            <form data-abide="ajax" id="email-form">
+              <small class="error">Please enter a valid email address</small>
+              <input id="email" type="email" placeholder="Enter your email" required>
+              <button id="beta-button" class="tiny" type="submit"> Get Early Access </button>
+            </form>
+          <div>
+        </div>
+      </section>
+
+      <section id="about">
+        <p class="about">
+          Pingpad is a stealth mode startup based in Palo Alto,
+          California backed by Greylock Partners, Floodgate Ventures, CrunchFund,
+          500 Startups and <a href="https://angel.co/pingpad" target="_blank">notable angel investors.</a>
+        </p>
+      </section>
+      <section id="team">
+        <h1 class="center"> Team </h1>
+        <ul class="small-block-grid-3 center">
+          <li class="about-block">
+            <a target="_blank" href="https://www.linkedin.com/in/rossmayfield">
+              <img class="about-pics" src="images/ross_mayfield.jpg">
+              <h4> Ross Mayfield </h4>
+            </a>
+            <h6><em> CEO & Co-founder </em><h6>
+            <h6>@Socialtext @RateXchange @Slideshare @LinkedIn</h6>
+          </li>
+          <li class="about-block">
+            <a target="_blank" href="https://www.linkedin.com/in/davidhmspector">
+              <img class="about-pics" src="images/david_hm_spector.jpg">
+              <h4> David Spector </h4>
+            </a>
+            <h6><em> VP of Engineering & Co-founder</em> <h6>
+            <h6> @Zeitgeist @Scale.io @VuDu @DropZoneNetworks @JPMorgan</h6>
+          </li>
+          <li class="about-block">
+            <a target="_blank" href="https://www.linkedin.com/in/peterkaminski">
+              <img class="about-pics" src="images/peter_kaminski.jpg">
+              <h4> Peter Kaminski </h4>
+            </a>
+            <h6><em>CTO & Co-founder</em><h6>
+            <h6> @Socialtext @Yipes @HealthRally @BAJobs @NanoSpace</h6>
+          </li>
+      </section>
+
+      <section id="join-the-team">
+        <button class="large xpand">Interested in joining our team?</button>
+        <div id="folder">
+        <section class="small-12 medium-6 large-4 small-centered medium-centered columns"d="jobs">
+          <form id="job-application">
+            <input class="job-input" type="text" placeholder="Full Name">
+            <input class="job-input" type="email" placeholder="Email Address">
+            <input class="job-input" type="tel" placeholder="Phone Number">
+            <input class="job-input" type="url" placeholder="LinkedIn Profile">
+            <input class="job-input" type="url" placeholder="Portfolio/Github">
+  <textarea rows="6" placeholder="Paste a coverletter"></textarea>
+            <button type="submit" class="large xpand">Submit</button>
+          </form>
+        </section>
+      </div>
+    </section>
+
+      <section id="social">
+        <footer class="sticky-foot">
+          <ul class="horizontal-list">
+            <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/li.png"></a> </li>
+            <li><a target="_blank" href="https://www.facebook.com/pingpad"><img class="foot-img" src="images/fb.png"></a> </li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/twit.png"></a> </li>
+        </footer>
+      </section>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/foundation.min.js"></script>
+        <script src="scripts/foundation.abide.js"></script>
+        <script src="scripts/jqcolor2.1.2.min.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

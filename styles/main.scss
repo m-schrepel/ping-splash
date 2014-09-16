@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "myriad-pro";
+  src: local("fonts/MYRIADPRO-REGULAR.woff") format('woff');
+}
+
+html {
+  background: url('../images/escher_hands.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+   background-color: rgba(0,0,0,.65);
+}
+
+body {
+  background-color: rgba(0,0,0,.65);
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+.row{
+  height:100%;
+}
+.fullscreen {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+}
+#layer {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#form-block{
+  position:absolute;
+  top:60%;
+  left: 5%;
+}
+#logo{
+  width: 50%;
+}
+#email {
+  width: 40%;
+  margin:10px 0;
+  display: inline;
+  padding: 0 0 0 10px;
+  height: 44px;
+  position: relative;
+  border-radius: 5px 0 0 5px;
+}
+#beta-button {
+  margin:0;
+  padding:14px;
+  position: absolute;
+  bottom:26px;
+  background-color: #faeac3;
+  font-size: 14px;
+  color: #2a3a3d;
+  border-radius: 0px 5px 5px 0;
+
+}
+#tag-line{
+  font-family: myriad-pro;
+  color: #faeac6;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+#logo-small{
+  float: left;
+  height: 30px;
+  margin: 10px 10px 10px 20px;
+}
+#nav-button{
+  float:right;
+  background-color: #fdb900;
+  color: #2a3a3d;
+  margin-bottom:0;
+  margin-right: 6px;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 7px;
+  width: 9em;
+  font-size: 1em;
+}
+small.error {
+  width: 40%;
+}
+#team{
+  background-color: rgba(0,0,0,.65);
+  padding-bottom: 25px;
+}
+.about-pics{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #d3d3d3;
+}
+.center {
+  margin-top: 0;
+  text-align: center;
+}
+.about-block{
+  margin-top: 20px;
+}
+h1, h4 {
+  color: #eee;
+}
+h6 em {
+  color: #fbeac3;
+}
+h6 {
+  color: #fbeac3;
+}
+.about {
+  color: #2a3a3d;
+  padding: 20px;
+  margin: 0 20px 0 20px;
+  font-size: 1.75em;
+}
+#about{
+  background-color: #faeac6;
+}
+.fa-arrow-circle-down {
+  opacity: .65;
+  color: #0ad3fc;
+  font-size: 3em;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  z-index: 3;
+  transition: .5s;
+}
+.fa-arrow-circle-down:hover{
+  opacity: 1;
+}
+#join-the-team{
+  background-color: rgba(0,0,0,.65);
+}
+#job-application{
+  margin-bottom:0;
+  padding-top: 20px;
+}
+.sticky-foot{
+  background-color: rgba(0,0,0,.65);
+  height: 80px;
+}
+.foot-img {
+  height: 60px;
+}
+.horizontal-list{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.horizontal-list li{
+  display: inline-block;
+  margin: 10px 5px 10px 5px;
+  opacity: .65;
+  transition: .5s;
+}
+.horizontal-list li:hover{
+  opacity:1;
+}
+#folder{
+  display: none;
+}
+.xpand{
+  display: block;
+  margin: 0 auto 0 auto;
+  background-color: #fdb900;
+  color: #2a3a3d;
+  border-radius: 5px;
+}
+.xpand:hover, .xpand:focus{
+  background-color: #faeac6;
+  color: #2a3a3d;
+}
