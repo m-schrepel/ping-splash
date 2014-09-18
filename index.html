@@ -29,7 +29,6 @@
         <![endif]-->
       <section id="home" class="fullscreen signup">
         <a href="#about"><i class="fa fa-arrow-circle-down"></i></a>
-        <!-- <div id="layer"></div> -->
         <div id="form-block">
           <img id="logo" src="images/logo.png">
           <p id="tag-line"> We are making collaboration as instant, simple and viral as messaging.</p>
@@ -42,15 +41,29 @@
           <div>
         </div>
       </section>
-
-      <section id="about">
+      <div id="magellan" data-magellan-expedition="fixed">
+        <dl class="sub-nav">
+          <a href="#home"><img id="logo-small" src="images/P.png"></a>
+          <dd data-magellan-arrival="about"><a href="#about">About</a></dd>
+          <dd data-magellan-arrival="team"><a href="#team">Our Team</a></dd>
+          <dd data-magellan-arrival="jobs"><a href="#join-the-team">Jobs</a></dd>
+          <ul class="horizontal-list">
+            <li id="follow-us"> <em> Follow Us </em> </li>
+            <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/li.png"></a> </li>
+            <li><a target="_blank" href="https://www.facebook.com/pingpad"><img class="foot-img" src="images/fb.png"></a> </li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/twit.png"></a> </li>
+        </dl>
+      </div>
+      <div id="small-wrapper"></div>
+      <section id="about" data-magellan-destination="about">
         <p class="about">
           Pingpad is a stealth mode startup based in Palo Alto,
           California backed by 500 Startups, CrunchFund, Floodgate Ventures, Greylock Partners and
           <a href="https://angel.co/pingpad" target="_blank">notable angel investors.</a>
         </p>
       </section>
-      <section id="team">
+      <div id="small-wrapper"></div>
+      <section id="team" data-magellan-destination="team">
         <h1 class="center"> Team </h1>
         <ul class="small-block-grid-3 center">
           <li class="about-block">
@@ -78,32 +91,108 @@
             <h6> @Socialtext @Yipes @HealthRally @BAJobs @NanoSpace</h6>
           </li>
       </section>
-
-      <section id="join-the-team">
-        <button class="large xpand">Interested in joining our team?</button>
-        <div id="folder">
-        <section class="small-12 medium-6 large-4 small-centered medium-centered columns"d="jobs">
-          <form id="job-application">
-            <input class="job-input" type="text" placeholder="Full Name">
-            <input class="job-input" type="email" placeholder="Email Address">
-            <input class="job-input" type="tel" placeholder="Phone Number">
-            <input class="job-input" type="url" placeholder="LinkedIn Profile">
-            <input class="job-input" type="url" placeholder="Portfolio/Github">
-  <textarea rows="6" placeholder="Paste a coverletter"></textarea>
-            <button type="submit" class="large xpand">Submit</button>
-          </form>
-        </section>
-      </div>
+      <div id="small-wrapper"></div>
+      <section id="join-the-team" data-magellan-destination="jobs">
+        <h2> Pingpad Jobs </h2>
+        <aside class="small-12 medium-6 large-6 columns">
+          <div class="title-container">
+            <div class="job-title-link">
+              <a id="android-click" href="#"> Android developer </a>
+            </div>
+          </div>
+          <div class="job-info android">
+            $70-$100k Salary
+          </div>
+          <div class="job-info android">
+            0.5%-1.5% Equity
+          </div>
+          <div class="job-info android">
+            Full Time - Palo Alto
+          </div>
+          <div class="xtend-info android">
+            <div class="xtend-skills-title"> Skills </div>
+            <div class="xtend-skills">
+              Java, Android, Mobile Development, RESTful Services, SQLite,
+              Push Notifications
+            </div>
+            <div class="description-title"> Description </div>
+            <div class="description">
+              We are hiring an Android Developer to join a stealth mode startup
+              with a proven team. Should have 2-3 years native Android
+              development experience on multiple phone and tablet device
+              profiles. This is an opportunity to be a solo performer and also
+              grow and lead a team over time. Skills required: Java, SQLite,
+              push notification, multiple device profiles, custom native
+              controls, ReSTful web APIs. Additional desirable skills: web app
+              development, iOS development, contributor to a fast moving
+              startup, agile development, partnering with a design team.
+            </div>
+          </div>
+        </aside>
+        <aside class="small-12 medium-6 large-6 columns">
+          <div class="title-container">
+            <div class="job-title-link">
+              <a id="ux-click" href="#"> UX/Visual Designer </a>
+            </div>
+          </div>
+          <div class="job-info ux">
+            $70-$100k Salary
+          </div>
+          <div class="job-info ux">
+            0.5%-1.5% Equity
+          </div>
+          <div class="job-info ux">
+            Full Time - Palo Alto
+          </div>
+          <div class="xtend-info ux">
+            <div class="xtend-skills-title"> Skills </div>
+            <div class="xtend-skills">
+              User Experience Design, Mobile Application Design, User Interface
+              Design, Visual Design
+            </div>
+            <div class="description-title"> Description </div>
+            <div class="description">
+              We are hiring an UX/Visual Designer to join a stealth mode startup
+              with a proven team. Should have 2+ years design experience
+              specific to iOS and/or Android native applications and 5+ years
+              UX/Visual Design. This is an opportunity to be a solo performer
+              and potentially lead a design team over time. You should have
+              experience working in a startup and with Agile development teams
+              and product managers. Your portfolio should show both the ability
+              to make key UX decisions and visual design talent. Superior
+              candidates also have CSS & HTML 5 programming skills, jQuery
+              programming skills, iOS/Android/Web programming skills and/or
+              both Consumer and Enterprise app design experience.
+            </div>
+          </div>
+        </aside>
     </section>
+    <div id="wrapper"></div>
+    <a href="#join"><button id="join" class="large xpand">Interested in joining our team?</button></a>
+    <div id="folder">
+    <section class="small-12 medium-6 large-4 small-centered medium-centered columns">
+      <form data-abide="ajax" id="job-application">
+        <input class="job-input" id="application-name" type="text" placeholder="Full Name" required>
+        <input class="job-input" id="application-email" type="email" placeholder="Email Address" required>
+        <input class="job-input" id="application-tel" type="tel" placeholder="Phone Number" required>
+        <input class="job-input" id="application-linkedin" type="url" placeholder="LinkedIn Profile" required>
+        <input class="job-input" id="application-git" type="url" placeholder="Portfolio/Github" required>
+<textarea rows="6" class="job-input" id="application-text-area" placeholder="Paste a coverletter"></textarea>
+        <button type="submit" id="application-submit" class="large xpand">Submit</button>
+      </form>
+    </section>
+  </div>
+  <div id="small-wrapper"></div>
 
-      <section id="social">
+      <!-- <section id="social" data-magellan-destination="follow-us">
         <footer class="sticky-foot">
           <ul class="horizontal-list">
+            <li id="follow-us"> <em> Follow Us </em> </li>
             <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/li.png"></a> </li>
             <li><a target="_blank" href="https://www.facebook.com/pingpad"><img class="foot-img" src="images/fb.png"></a> </li>
             <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/twit.png"></a> </li>
         </footer>
-      </section>
+      </section> -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -124,6 +213,7 @@
         <!-- build:js scripts/main.js -->
         <script src="scripts/foundation.min.js"></script>
         <script src="scripts/foundation.abide.js"></script>
+        <script src="scripts/foundation.magellan.js"></script>
         <script src="scripts/jqcolor2.1.2.min.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->

@@ -8,23 +8,39 @@ $(function() {
       fixed_top: 0, // top distance in pixels assigned to the fixed element on scroll
     }
   });
+
+  $('#android-click').click(function(e){
+    e.preventDefault();
+    $('.job-info.android').fadeToggle(500);
+    $('.xtend-info.android').fadeToggle(500);
+  });
+
+  $('#ux-click').click(function(e){
+    e.preventDefault();
+    $('.job-info.ux').fadeToggle(500);
+    $('.xtend-info.ux').fadeToggle(500);
+  });
+
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 90
         }, 1000);
         return false;
       }
     }
   });
-  $('.xpand').click(function(){
 
-    $('#folder').slideToggle(750);
-    $('body').animate({scrollTop: $(document).height()}, 750);
+
+  $('.xpand').click(function(){
+    $('#folder').fadeToggle(750);
+
   });
+
+
   $('#email-form').on('valid.fndtn.abide', function(){
     // $.ajax({
     //   url: "https://docs.google.com/a/pingpad.co/forms/d/1y_dqv4T0QQNw04quX0VRteOtkYN_dpDQNNGmI_kCE4s/formResponse",

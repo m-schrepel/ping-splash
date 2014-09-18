@@ -4,16 +4,21 @@
 }
 
 html {
-  background: url('../images/escher_hands.jpg') no-repeat center center fixed;
+  background: url('../images/escher_hands.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
    background-size: cover;
-   background-color: rgba(0,0,0,.65);
+   height: 100%;
 }
-
+#wrapper{
+  min-height: 75%;
+}
+#small-wrapper{
+  min-height: 40%;
+}
 body {
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(0,0,0,0);
   height: 100%;
   width: 100%;
   margin:0;
@@ -27,14 +32,6 @@ body {
   height: 100%;
   width: 100%;
 
-}
-#layer {
-    background-color: rgba(0, 0, 0, 0.65);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 #form-block{
   position:absolute;
@@ -73,7 +70,7 @@ body {
 #logo-small{
   float: left;
   height: 30px;
-  margin: 10px 10px 10px 20px;
+  margin: 17px 10px 10px 20px;
 }
 #nav-button{
   float:right;
@@ -91,7 +88,6 @@ small.error {
   width: 40%;
 }
 #team{
-  background-color: rgba(0,0,0,.65);
   padding-bottom: 25px;
 }
 .about-pics{
@@ -117,13 +113,14 @@ h6 {
   color: #fbeac3;
 }
 .about {
-  color: #2a3a3d;
+  color: #faeac6;
   padding: 20px;
   margin: 0 20px 0 20px;
   font-size: 1.75em;
 }
 #about{
-  background-color: #faeac6;
+  background-color: #2a3a3d;
+  width: 101%;
 }
 .fa-arrow-circle-down {
   opacity: .65;
@@ -139,20 +136,21 @@ h6 {
   opacity: 1;
 }
 #join-the-team{
-  background-color: rgba(0,0,0,.65);
+  text-align: center;
 }
 #job-application{
   margin-bottom:0;
   padding-top: 20px;
 }
 .sticky-foot{
-  background-color: rgba(0,0,0,.65);
   height: 80px;
 }
 .foot-img {
-  height: 60px;
+  height: 48px;
+  margin: 10px 5px 0 5px;
 }
 .horizontal-list{
+  float: right;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -160,13 +158,12 @@ h6 {
 }
 .horizontal-list li{
   display: inline-block;
-  margin: 10px 5px 10px 5px;
-  opacity: .65;
-  transition: .5s;
+  margin: 0px;
 }
-.horizontal-list li:hover{
-  opacity:1;
+.horizontal-list li a{
+  padding: 0;
 }
+
 #folder{
   display: none;
 }
@@ -180,4 +177,70 @@ h6 {
 .xpand:hover, .xpand:focus{
   background-color: #faeac6;
   color: #2a3a3d;
+}
+#follow-us{
+  line-height: 70px;
+  opacity: 1;
+  display: block;
+  color: #fbeac3;
+  margin: 0 20px 0 0;
+}
+aside {
+  display: block;
+  margin: 0 auto;
+  color: #fbeac3;
+}
+h2 {
+  color: #fff;
+}
+.job-title-link{
+  font-size: 1.4375rem;
+  margin-bottom: 1em;
+}
+.job-info{
+  font-size: 1em;
+  margin-bottom: .75em;
+}
+.job-input{
+  border-radius: 5px;
+}
+#job-application input{
+  border-radius: 5px;
+}
+.xtend-info{
+  display:none;
+}
+.xtend-skills-title{
+  font-size: 1.2em;
+  color: #eee;
+  margin: 1em;
+}
+.xtend-skills{
+  text-align: left;
+}
+.description-title{
+  color: #eee;
+  font-size: 1.2em;
+  margin: 1em;
+}
+.description{
+  text-align: left;
+  margin-bottom: 2em;
+}
+#magellan{
+  padding:0;
+  height: 70px;
+  background-color: #2a3a3d;
+}
+.sub-nav dd.active a{
+  padding: 32px;
+  border-radius: 0;
+  background-color: #fdb900;
+  color: #2a3a3d;
+}
+.sub-nav dd.active a:hover{
+  background-color: #fbeac3;
+}
+.sub-nav dd{
+  line-height: 60px;
 }
