@@ -34,23 +34,18 @@
         <div id="form-block">
           <img id="logo" src="images/logo.png">
           <p id="tag-line"> We are making collaboration as instant, simple and viral as messaging.</p>
-          <div>
             <iframe id="hidden_iframe" name="hidden_iframe" onload="someFunc();" style="display: none;"></iframe>
             <form data-abide action="https://docs.google.com/a/pingpad.co/forms/d/1y_dqv4T0QQNw04quX0VRteOtkYN_dpDQNNGmI_kCE4s/formResponse?embedded=true" method="POST" onsubmit="submitted=true" target="hidden_iframe">
               <small class="error">You must enter a valid email address</small>
-              <input type="email" name="entry.283086831" value="" id="entry_283086831" dir="auto" aria-label="Enter Your Email" aria-required="true" required title="" placeholder='Enter Your Email'>
-              <div class="error-message" id="381422213_errorMessage"></div>
-              <input type="hidden" name="draftResponse" value="[,,"6380289820761137480"]">
-              <input type="hidden" name="pageHistory" value="0">
-              <input type="hidden" name="fbzx" value="6380289820761137480">
-              <button type="submit" name="submit" value="Submit" id="application-submit" class="tiny">Get Early Access</button>
+              <div id="relative">
+                <input type="email" name="entry.283086831" value="" id="entry_283086831" dir="auto" aria-label="Enter Your Email" aria-required="true" required title="" placeholder='Enter Your Email'>
+                <div class="error-message" id="381422213_errorMessage"></div>
+                <input type="hidden" name="draftResponse" value="[,,"6380289820761137480"]">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="6380289820761137480">
+                <button type="submit" name="submit" value="Submit" id="application-submit" class="tiny">Get Early Access</button>
+              </div>
             </form>
-            <!-- <form data-abide="ajax" id="email-form">
-              <small class="error">Please enter a valid email address</small>
-              <input id="email" type="email" placeholder="Enter your email" required>
-              <button id="beta-button" class="tiny" type="submit"> Get Early Access </button>
-            </form> -->
-          <div>
         </div>
       </section>
       <div id="magellan" data-magellan-expedition="fixed">
@@ -77,7 +72,7 @@
       <div id="small-wrapper"></div>
       <section id="team" data-magellan-destination="team">
         <h1 class="center"> Team </h1>
-        <ul class="small-block-grid-3 center">
+        <ul class="small-block-grid-1 medium-block-grid-3 center">
           <li class="about-block">
             <a target="_blank" href="https://www.linkedin.com/in/davidhmspector">
               <img class="about-pics" src="images/david_hm_spector.png">

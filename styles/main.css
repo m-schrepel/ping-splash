@@ -13,6 +13,11 @@ html {
 #small-wrapper{
   min-height: 40%;
 }
+#relative{
+  position: relative;
+  height: 3em;
+  min-width: 80%;
+}
 body {
   font-family: "Helvetica Neue", "Helvetica";
   background-color: rgba(0,0,0,0);
@@ -42,17 +47,17 @@ body {
   margin:10px 0;
   display: inline;
   padding: 0 0 0 10px;
-  height: 44px;
-  position: relative;
+  height: 3em;
+  position: absolute;
   border-radius: 5px 0 0 5px;
 }
 #application-submit {
   margin:0;
-  padding:14px;
+  height: 3em;
   position: absolute;
-  bottom:26px;
+  bottom:-7%;
   background-color: #faeac3;
-  left: 242px;
+  right: 37%;
   font-size: 14px;
   color: #2a3a3d;
   border-radius: 0px 5px 5px 0;
@@ -258,4 +263,30 @@ h2 {
 }
 .bottom-wrapper{
   position: relative;
+}
+@media (max-width: 573px){
+  #follow-us {
+    display: none;
+  }
+}
+@media (max-width: 493px){
+  .sub-nav dd{
+    margin-left: 0;
+  }
+  #form-block {
+    top: 50%;
+  }
+  #relative {
+    margin-bottom: 2em;
+    height: 6em;
+  }
+  #entry_283086831 {
+    border-radius: 5px;
+    width: 60%;
+  }
+  #application-submit {
+    width: 60%;
+    border-radius: 5px;
+    left:0;
+  }
 }
