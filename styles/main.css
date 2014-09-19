@@ -29,6 +29,9 @@ body {
 .row{
   height:100%;
 }
+.second{
+  display: none;
+}
 .fullscreen {
   position: relative;
   height: 100%;
@@ -278,7 +281,7 @@ h2 {
   }
   #relative {
     margin-bottom: 2em;
-    height: 6em;
+    height: 10em;
   }
   #entry_283086831 {
     border-radius: 5px;
@@ -288,5 +291,18 @@ h2 {
     width: 60%;
     border-radius: 5px;
     left:0;
+    bottom: 37%;
+  }
+}
+@media(max-width:474px){
+  #hide-list-small{
+    display: none;
+  }
+  .second {
+    display: block;
+    float: left;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
   }
 }
