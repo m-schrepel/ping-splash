@@ -5,6 +5,8 @@
         <title>pingpad splash</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="scripts/main.js"></script>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css styles/vendor.css -->
@@ -33,11 +35,21 @@
           <img id="logo" src="images/logo.png">
           <p id="tag-line"> We are making collaboration as instant, simple and viral as messaging.</p>
           <div>
-            <form data-abide="ajax" id="email-form">
+            <iframe id="hidden_iframe" name="hidden_iframe" onload="someFunc();" style="display: none;"></iframe>
+            <form data-abide action="https://docs.google.com/a/pingpad.co/forms/d/1y_dqv4T0QQNw04quX0VRteOtkYN_dpDQNNGmI_kCE4s/formResponse?embedded=true" method="POST" onsubmit="submitted=true" target="hidden_iframe">
+              <small class="error">You must enter a valid email address</small>
+              <input type="email" name="entry.283086831" value="" id="entry_283086831" dir="auto" aria-label="Enter Your Email" aria-required="true" required title="" placeholder='Enter Your Email'>
+              <div class="error-message" id="381422213_errorMessage"></div>
+              <input type="hidden" name="draftResponse" value="[,,"6380289820761137480"]">
+              <input type="hidden" name="pageHistory" value="0">
+              <input type="hidden" name="fbzx" value="6380289820761137480">
+              <button type="submit" name="submit" value="Submit" id="application-submit" class="tiny">Get Early Access</button>
+            </form>
+            <!-- <form data-abide="ajax" id="email-form">
               <small class="error">Please enter a valid email address</small>
               <input id="email" type="email" placeholder="Enter your email" required>
               <button id="beta-button" class="tiny" type="submit"> Get Early Access </button>
-            </form>
+            </form> -->
           <div>
         </div>
       </section>
@@ -49,9 +61,9 @@
           <dd data-magellan-arrival="jobs"><a href="#join-the-team">Jobs</a></dd>
           <ul class="horizontal-list">
             <li id="follow-us"> <em> Follow Us </em> </li>
-            <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/li.png"></a> </li>
+            <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/twit.png"></a> </li>
             <li><a target="_blank" href="https://www.facebook.com/pingpad"><img class="foot-img" src="images/fb.png"></a> </li>
-            <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/twit.png"></a> </li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/li.png"></a> </li>
         </dl>
       </div>
       <div id="small-wrapper"></div>
@@ -66,14 +78,6 @@
       <section id="team" data-magellan-destination="team">
         <h1 class="center"> Team </h1>
         <ul class="small-block-grid-3 center">
-          <li class="about-block">
-            <a target="_blank" href="https://www.linkedin.com/in/rossmayfield">
-              <img class="about-pics" src="images/ross_mayfield.jpg">
-              <h4> Ross Mayfield </h4>
-            </a>
-            <h6><em> CEO & Co-founder </em><h6>
-            <h6>@Socialtext @RateXchange @Slideshare @LinkedIn</h6>
-          </li>
           <li class="about-block">
             <a target="_blank" href="https://www.linkedin.com/in/davidhmspector">
               <img class="about-pics" src="images/david_hm_spector.png">
@@ -90,21 +94,26 @@
             <h6><em>CTO & Co-founder</em><h6>
             <h6> @Socialtext @Yipes @HealthRally @BAJobs @NanoSpace</h6>
           </li>
+          <li class="about-block">
+            <a target="_blank" href="https://www.linkedin.com/in/rossmayfield">
+              <img class="about-pics" src="images/ross_mayfield.jpg">
+              <h4> Ross Mayfield </h4>
+            </a>
+            <h6><em> CEO & Co-founder </em><h6>
+            <h6>@Socialtext @RateXchange @Slideshare @LinkedIn</h6>
+          </li>
       </section>
       <div id="small-wrapper"></div>
       <section id="join-the-team" data-magellan-destination="jobs">
-        <h2> Pingpad Jobs </h2>
+        <h2> Jobs </h2>
         <aside class="small-12 medium-6 large-6 columns">
           <div class="title-container">
             <div class="job-title-link">
-              <a id="android-click" href="#"> Android developer </a>
+              <h4> Android developer </h4>
             </div>
           </div>
           <div class="job-info android">
             $70-$100k Salary
-          </div>
-          <div class="job-info android">
-            0.5%-1.5% Equity
           </div>
           <div class="job-info android">
             Full Time - Palo Alto
@@ -132,14 +141,11 @@
         <aside class="small-12 medium-6 large-6 columns">
           <div class="title-container">
             <div class="job-title-link">
-              <a id="ux-click" href="#"> UX/Visual Designer </a>
+              <h4> UX/Visual Designer </h4>
             </div>
           </div>
           <div class="job-info ux">
             $70-$100k Salary
-          </div>
-          <div class="job-info ux">
-            0.5%-1.5% Equity
           </div>
           <div class="job-info ux">
             Full Time - Palo Alto
@@ -168,31 +174,43 @@
         </aside>
     </section>
     <div id="wrapper"></div>
-    <a href="#join"><button id="join" class="large xpand">Interested in joining our team?</button></a>
+    <div class="button-div">
+      <a href="#join"><button id="join" class="large xpand">Join our team</button></a>
+    </div>
     <div id="folder">
     <section class="small-12 medium-6 large-4 small-centered medium-centered columns">
-      <form data-abide="ajax" id="job-application">
+      <iframe id="second_hidden_iframe" name="second_hidden_iframe" onload="anotherFunc();" style="display: none;"></iframe>
+      <form data-abide id="job-application" action="https://docs.google.com/a/pingpad.co/forms/d/1Yj_Ji6deHGMBuilTAUpAXxplRD5XIJomUINuhUz610A/formResponse" method="POST" id="ss-form" target="second_hidden_iframe" onsubmit="submittedTwo = true;">
+        <input type="text" name="entry.1139378209" value="" class="job-input" id="entry_1139378209" dir="auto" aria-label="Name  " placeholder="Full Name" required>
+        <small class="error">Name is required.</small>
+        <input type="email" name="entry.10547296" value="" class="job-input" id="entry_10547296" dir="auto" aria-label="Email  "  placeholder="Email Address" title="" required>
+        <small class="error">Must be a valid email address.</small>
+        <input type="tel" name="entry.964692501" value="" class="job-input" id="entry_964692501" dir="auto" aria-label="Phone Number  "  placeholder="Telephone Number" title="" required>
+        <small class="error">Phone # is required.</small>
+        <input type="url" name="entry.874179714" value="" class="job-input" id="entry_874179714" dir="auto" aria-label="LinkedIn Profile  "  placeholder="LinkedIn Profile" title="" required>
+        <small class="error">Format is http://www.linkedin.com</small>
+        <input type="url" name="entry.1701841656" value="" class="job-input" id="entry_1701841656" dir="auto" aria-label="Portfolio or Github link  "  placeholder="Github Link" title="" required>
+        <small class="error">Format is http://www.github.com</small>
+        <textarea name="entry.203844830" rows="8" cols="0" class="job-input" id="entry_203844830" dir="auto" aria-label="Cover Letter  " placeholder="Paste a cover letter" ></textarea>
+        <div class="error-message" id="393838047_errorMessage"></div>
+        <input type="hidden" name="draftResponse" value="[,,&quot;878702746828029677&quot;]">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" value="878702746828029677">
+        <button type="submit" name="submit" value="Submit" id="ss-submit" class="large xpand"> Submit </button>
+      </form>
+      <!-- <form data-abide="ajax" id="job-application">
         <input class="job-input" id="application-name" type="text" placeholder="Full Name" required>
         <input class="job-input" id="application-email" type="email" placeholder="Email Address" required>
         <input class="job-input" id="application-tel" type="tel" placeholder="Phone Number" required>
         <input class="job-input" id="application-linkedin" type="url" placeholder="LinkedIn Profile" required>
         <input class="job-input" id="application-git" type="url" placeholder="Portfolio/Github" required>
-<textarea rows="6" class="job-input" id="application-text-area" placeholder="Paste a coverletter"></textarea>
-        <button type="submit" id="application-submit" class="large xpand">Submit</button>
-      </form>
+<textarea rows="6" class="job-input" id="application-text-area" placeholder="Paste a cover letter"></textarea>
+      </form> -->
     </section>
   </div>
-  <div id="small-wrapper"></div>
-
-      <!-- <section id="social" data-magellan-destination="follow-us">
-        <footer class="sticky-foot">
-          <ul class="horizontal-list">
-            <li id="follow-us"> <em> Follow Us </em> </li>
-            <li><a target="_blank" href="http://www.twitter.com/pingpad"><img class="foot-img" src="images/li.png"></a> </li>
-            <li><a target="_blank" href="https://www.facebook.com/pingpad"><img class="foot-img" src="images/fb.png"></a> </li>
-            <li><a target="_blank" href="https://www.linkedin.com/company/3832843"><img class="foot-img" src="images/twit.png"></a> </li>
-        </footer>
-      </section> -->
+  <div id="small-wrapper" class="bottom-wrapper">
+    <a href="#home"><i class="fa fa-arrow-circle-up"></i></a>
+  </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -206,7 +224,6 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -215,7 +232,6 @@
         <script src="scripts/foundation.abide.js"></script>
         <script src="scripts/foundation.magellan.js"></script>
         <script src="scripts/jqcolor2.1.2.min.js"></script>
-        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

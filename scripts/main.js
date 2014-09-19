@@ -1,3 +1,31 @@
+var someFunc = function(){
+  try {
+    $('#hidden_iframe').contents();
+  } catch(err) {
+    $('#application-submit').animate({backgroundColor: 'green', color: 'white'}, 750).text('We\'ll be in touch!');
+    $('#entry_283086831').val("");
+    var error = true;
+  }
+  if(error){
+    $('#application-submit').animate({backgroundColor: 'red', color: 'white'}, 750).text('Sorry. Try again.');
+  }
+};
+
+var anotherFunc = function(){
+  try {
+    $('#second_hidden_iframe').contents();
+  } catch(err) {
+    $('#join').animate({backgroundColor: 'green', color: 'white'}, 750).text('We\'ll be in touch!');
+    $('#job-application')[0].reset();
+    $('#folder').fadeToggle(750);
+    var error = true;
+  }
+  if(error){
+    console.log(error)
+    $('#join').animate({backgroundColor: 'red', color: 'white'}, 750).text('Sorry. Try again.');
+  }
+};
+
 $(function() {
   $(document).foundation({
     "magellan-expedition": {
@@ -7,18 +35,6 @@ $(function() {
       throttle_delay: 50, // calculation throttling to increase framerate
       fixed_top: 0, // top distance in pixels assigned to the fixed element on scroll
     }
-  });
-
-  $('#android-click').click(function(e){
-    e.preventDefault();
-    $('.job-info.android').fadeToggle(500);
-    $('.xtend-info.android').fadeToggle(500);
-  });
-
-  $('#ux-click').click(function(e){
-    e.preventDefault();
-    $('.job-info.ux').fadeToggle(500);
-    $('.xtend-info.ux').fadeToggle(500);
   });
 
   $('a[href*=#]:not([href=#])').click(function() {
@@ -35,20 +51,18 @@ $(function() {
   });
 
 
-  $('.xpand').click(function(){
+  $('#join').click(function(){
     $('#folder').fadeToggle(750);
+  });
 
+  $('#entry_874179714').on('focus', function(){
+    $(this).val("http://")
+  });
+
+  $('#entry_1701841656').on('focus', function(){
+    $(this).val("http://")
   });
 
 
-  $('#email-form').on('valid.fndtn.abide', function(){
-    // $.ajax({
-    //   url: "https://docs.google.com/a/pingpad.co/forms/d/1y_dqv4T0QQNw04quX0VRteOtkYN_dpDQNNGmI_kCE4s/formResponse",
-    //   type: "POST",
-    //   data: {"entry.1": new Date(), "entry.283086831": $('#email').val()},
-    //   success: function(){$('#beta-button').animate({backgroundColor: 'green', color: 'white'}, 750).text('We\'ll be in touch!');},
-    //   error: function(){$('#beta-button').animate({backgroundColor: 'red', color: 'white'}, 750).text('Sorry, try again.')}
-    // });
-  });
 
 });
