@@ -281,7 +281,7 @@ h2 {
   }
   #relative {
     margin-bottom: 2em;
-    height: 10em;
+    height: 11em;
   }
   #entry_283086831 {
     border-radius: 5px;
@@ -302,7 +302,7 @@ h2 {
     display: block;
     float: left;
     position: absolute;
-    bottom: 5%;
-    left: 10%;
+    bottom: 2%;
+    left: 6%;
   }
 }
