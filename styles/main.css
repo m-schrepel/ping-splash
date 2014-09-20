@@ -14,9 +14,9 @@ html {
   min-height: 40%;
 }
 #relative{
+  width: 380px;
   position: relative;
   height: 3em;
-  min-width: 80%;
 }
 body {
   font-family: "Helvetica Neue", "Helvetica";
@@ -46,21 +46,19 @@ body {
   width: 50%;
 }
 #entry_283086831 {
-  width: 40%;
-  margin:10px 0;
+  width: 60%;
   display: inline;
   padding: 0 0 0 10px;
+  float: left;
   height: 3em;
-  position: absolute;
   border-radius: 5px 0 0 5px;
 }
 #application-submit {
+  width: 40%;
   margin:0;
   height: 3em;
-  position: absolute;
-  bottom:-7%;
   background-color: #faeac3;
-  right: 37%;
+  float: right;
   font-size: 14px;
   color: #2a3a3d;
   border-radius: 0px 5px 5px 0;
@@ -288,10 +286,11 @@ h2 {
     width: 60%;
   }
   #application-submit {
+    float: left;
     width: 60%;
     border-radius: 5px;
     left:0;
-    bottom: 37%;
+    bottom: 0;
   }
 }
 @media(max-width:474px){
@@ -301,8 +300,9 @@ h2 {
   .second {
     display: block;
     float: left;
-    position: absolute;
-    bottom: 2%;
-    left: 6%;
+    width: 60%;
+  }
+  .foot-img {
+    margin: 10px 0 0 0;
   }
 }
