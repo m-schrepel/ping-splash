@@ -305,4 +305,7 @@ h2 {
   .foot-img {
     margin: 10px 0 0 0;
   }
+  #form-block{
+    top: 40%;
+  }
 }
